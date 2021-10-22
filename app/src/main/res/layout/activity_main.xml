@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonBuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:text="Buscar"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextCep"
+        app:layout_constraintStart_toEndOf="@+id/editTextCep" />
+
+    <Button
+        android:id="@+id/buttonBuscar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:text="Buscar"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextCep"
+        app:layout_constraintStart_toEndOf="@+id/editTextCep" />
+
+    <EditText
+        android:id="@+id/editTextCep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="76dp"
+        android:ems="10"
+        android:hint="CEP"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/textViewEndereco"
+        app:layout_constraintEnd_toStartOf="@+id/buttonBuscar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewEndereco"
+        android:layout_width="353dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Endereço"
+        app:layout_constraintEnd_toEndOf="@+id/buttonBuscar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextCep"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCep" />
+
+    <EditText
+        android:id="@+id/editTextRua"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nome da Rua"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/textViewEndereco"
+        app:layout_constraintStart_toStartOf="@+id/textViewEndereco"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEndereco" />
+
+    <EditText
+        android:id="@+id/editTextCidade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Nome da Cidade"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editTextRua"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRua" />
+
+    <EditText
+        android:id="@+id/editTextEstado"
+        android:layout_width="122dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="sigla"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextRua"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRua" />
+
+    <Button
+        android:id="@+id/buttonBuscarRua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="20dp"
+        android:text="Buscar cep da Rua"
+        app:layout_constraintBottom_toTopOf="@+id/rv_ceps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEstado" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_ceps"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBuscarRua"
+        tools:listitem="@layout/ceps_recycler_view_layout"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
