@@ -7,7 +7,7 @@ import retrofit2.create
 class RetrofitFactory {
 
     //RECEBE A URL DO VIACEP
-    val URL = "https://viacep.com.br/ws/"
+    val URL = "http://10.0.2.2:8080/api/"
 
     val retrofitFactory = Retrofit.Builder()
             .baseUrl(URL)

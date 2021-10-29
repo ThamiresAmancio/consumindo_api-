@@ -24,5 +24,10 @@ interface RetrofitService {
     fun excluir(@Path("id") id: Int){
 
     }
+
+
+
+    @POST("clientes")
+    fun gravarCliente(@Body cliente : Cliente) : Call<Cliente>
 }
 
